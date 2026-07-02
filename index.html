@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mishari Mohammed AlMishari Alhussain - applied machine learning, optimization, algorithms, and competitive programming CV.">
+    <title>Mishari Mohammed AlMishari Alhussain - CV</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-mark" aria-hidden="true">CV</span>
+        <span id="brand-name">Mishari Mohammed AlMishari Alhussain</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#honors">Honors</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <a href="#paper">PDF</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <p class="eyebrow" id="hero-eyebrow"></p>
+          <h1 id="hero-title"></h1>
+          <p class="hero-summary" id="hero-summary"></p>
+          <div class="hero-actions" id="hero-actions" aria-label="Primary actions"></div>
+        </div>
+      </section>
+
+      <section class="cv-shell" id="honors" aria-labelledby="honors-title">
+        <div class="section-heading">
+          <p class="eyebrow">Strongest Signal</p>
+          <h2 id="honors-title">Honors &amp; Competitive Results</h2>
+        </div>
+        <div class="honors-grid" id="honors-list"></div>
+      </section>
+
+      <section class="cv-shell" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2 id="experience-title">Building and competing in algorithmic systems</h2>
+        </div>
+        <div class="entry-list" id="experience-list"></div>
+      </section>
+
+      <section class="cv-shell" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2 id="projects-title">Compact technical work</h2>
+        </div>
+        <div class="project-grid" id="projects-list"></div>
+      </section>
+
+      <section class="cv-shell split-section" id="education" aria-labelledby="education-title">
+        <div class="section-card">
+          <div class="section-heading compact">
+            <p class="eyebrow">Education</p>
+            <h2 id="education-title">Academic background</h2>
+          </div>
+          <div class="entry-list compact-list" id="education-list"></div>
+        </div>
+
+        <div class="section-card">
+          <div class="section-heading compact">
+            <p class="eyebrow">Skills</p>
+            <h2>Technical stack</h2>
+          </div>
+          <div class="skill-groups" id="skills-list"></div>
+        </div>
+      </section>
+
+      <section class="cv-shell contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Contact</h2>
+          <p id="contact-copy"></p>
+        </div>
+        <div class="contact-actions" id="contact-actions"></div>
+      </section>
+
+      <section class="cv-shell paper-section" id="paper" aria-labelledby="paper-title">
+        <div class="paper-card">
+          <div>
+            <p class="eyebrow">Paper CV</p>
+            <h2 id="paper-title">Paper CV (PDF)</h2>
+            <p>The interactive CV is the default view. Use the PDF for applications or when a one-page resume file is required.</p>
+          </div>
+          <div class="resume-actions" id="paper-actions" aria-label="Resume PDF actions"></div>
+          <details class="resume-details">
+            <summary>Preview the PDF on this page</summary>
+            <div class="resume-viewer" aria-label="Resume PDF preview">
+              <object data="assets/resume.pdf#view=FitH" type="application/pdf">
+                <a href="assets/resume.pdf" target="_blank" rel="noreferrer">Open PDF CV</a>
+              </object>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

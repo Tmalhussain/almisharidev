@@ -1,0 +1,530 @@
+:root {
+  color-scheme: light;
+  --ink: #132024;
+  --muted: #5b6a70;
+  --line: #dbe2e1;
+  --surface: #ffffff;
+  --surface-soft: #f6f8f7;
+  --page: #fbfbf8;
+  --accent: #0e6f68;
+  --accent-dark: #0a514d;
+  --signal: #b14e37;
+  --shadow: 0 18px 45px rgba(19, 32, 36, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 40px;
+  border-bottom: 1px solid rgba(19, 32, 36, 0.08);
+  background: rgba(251, 251, 248, 0.92);
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  flex: 0 0 42px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+#brand-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.site-nav a {
+  min-height: 38px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.button:hover,
+.button:focus-visible,
+.project-card a:hover,
+.project-card a:focus-visible,
+.resume-details summary:focus-visible {
+  outline: 3px solid rgba(14, 111, 104, 0.22);
+  outline-offset: 3px;
+}
+
+.site-nav a:hover {
+  color: var(--ink);
+  background: var(--surface-soft);
+}
+
+.hero {
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(14, 111, 104, 0.08) 0, rgba(14, 111, 104, 0) 32%),
+    var(--surface);
+}
+
+.hero-inner,
+.cv-shell {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.hero-inner {
+  padding-top: 110px;
+  padding-bottom: 78px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--signal);
+  font-size: 0.76rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 780px;
+  margin: 0;
+  font-size: 4.35rem;
+  line-height: 0.98;
+}
+
+.hero-summary {
+  max-width: 760px;
+  margin: 26px 0 0;
+  color: #304045;
+  font-size: 1.18rem;
+}
+
+.hero-actions,
+.contact-actions,
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-actions {
+  margin-top: 32px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  border: 1px solid rgba(19, 32, 36, 0.16);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.button.primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.button.quiet {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.cv-shell {
+  padding-top: 76px;
+}
+
+.section-heading {
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 2.15rem;
+  line-height: 1.14;
+}
+
+.section-heading.compact {
+  margin-bottom: 20px;
+}
+
+.section-heading.compact h2 {
+  font-size: 1.5rem;
+}
+
+.honors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.honor-card,
+.project-card,
+.section-card,
+.paper-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.honor-card {
+  min-height: 190px;
+  padding: 24px;
+}
+
+.honors-grid .honor-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  min-height: 150px;
+}
+
+.honor-result {
+  display: block;
+  color: var(--accent-dark);
+  font-size: 1.82rem;
+  font-weight: 950;
+  line-height: 1.08;
+}
+
+.honor-card h3,
+.entry h3,
+.project-card h3,
+.skill-row h3 {
+  margin: 14px 0 0;
+  font-size: 1.05rem;
+  line-height: 1.28;
+}
+
+.honor-card p,
+.entry p,
+.project-card p,
+.paper-card p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.entry-list {
+  display: grid;
+  gap: 26px;
+}
+
+.entry {
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--line);
+}
+
+.entry:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.entry h3 span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.entry-meta {
+  color: var(--signal) !important;
+  font-size: 0.94rem;
+  font-weight: 850;
+}
+
+.entry ul {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding-left: 20px;
+  color: var(--ink);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  min-height: 230px;
+  padding: 22px;
+}
+
+.project-tag {
+  margin: 0 !important;
+  color: var(--signal) !important;
+  font-size: 0.82rem;
+  font-weight: 950;
+}
+
+.project-card a {
+  display: inline-flex;
+  margin-top: 16px;
+  color: var(--accent-dark);
+  font-weight: 900;
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.section-card {
+  padding: 24px;
+}
+
+.compact-list {
+  gap: 18px;
+}
+
+.compact-entry {
+  padding-bottom: 18px;
+}
+
+.skill-groups {
+  display: grid;
+  gap: 18px;
+}
+
+.skill-row h3 {
+  margin-top: 0;
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.skill-chips span {
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: #36484d;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.contact-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding-bottom: 76px;
+}
+
+.contact-section h2,
+.paper-card h2 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.paper-section {
+  padding-top: 0;
+  padding-bottom: 76px;
+}
+
+.paper-card {
+  padding: 24px;
+}
+
+.paper-card .resume-actions {
+  margin-top: 20px;
+}
+
+.resume-details {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.resume-details summary {
+  min-height: 40px;
+  color: var(--accent-dark);
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.resume-viewer {
+  height: min(76vh, 780px);
+  min-height: 520px;
+  margin-top: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.resume-viewer object {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 860px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 22px;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+  }
+
+  .hero-inner,
+  .cv-shell {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .hero-inner {
+    padding-top: 72px;
+    padding-bottom: 54px;
+  }
+
+  .hero h1 {
+    font-size: 3.1rem;
+  }
+
+  .honors-grid,
+  .project-grid,
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-nav a {
+    padding-right: 8px;
+    padding-left: 8px;
+    font-size: 0.88rem;
+  }
+
+  .hero h1 {
+    font-size: 2.38rem;
+  }
+
+  .hero-summary {
+    font-size: 1.02rem;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .hero-actions,
+  .contact-actions,
+  .resume-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .cv-shell {
+    padding-top: 56px;
+  }
+
+  .section-heading h2 {
+    font-size: 1.72rem;
+  }
+
+  .honor-card,
+  .project-card,
+  .section-card,
+  .paper-card {
+    padding: 20px;
+  }
+
+  .honor-result {
+    font-size: 1.55rem;
+  }
+}
+
+@media print {
+  @page {
+    margin: 14mm;
+    size: letter;
+  }
+
+  .site-header,
+  .hero-actions,
+  .paper-section {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .hero,
+  .honor-card,
+  .project-card,
+  .section-card,
+  .paper-card {
+    box-shadow: none;
+  }
+}
